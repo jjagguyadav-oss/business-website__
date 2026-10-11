@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Jagdish Business</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f5f7fb;
+    color:#151515;
+}
+
+/* NAVBAR */
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:white;
+    border-bottom:1px solid #ddd;
+}
+
+.navbar{
+    max-width:1100px;
+    margin:auto;
+    padding:16px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+.nav-links a{
+    color:#111;
+    text-decoration:none;
+    font-size:15px;
+}
+
+/* HERO */
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:40px 20px;
+}
+
+.hero-content{
+    max-width:750px;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 15px;
+    border:1px solid #111;
+    border-radius:30px;
+    font-size:13px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(38px,8vw,70px);
+    line-height:1.05;
+    margin-bottom:20px;
+}
+
+.hero p{
+    color:#666;
+    font-size:18px;
+    line-height:1.6;
+    margin-bottom:30px;
+}
+
+/* BUTTON */
+.btn{
+    display:inline-block;
+    padding:13px 25px;
+    margin:5px;
+    border:2px solid #111;
+    border-radius:12px;
+    background:white;
+    color:#111;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.25s;
+}
+
+.btn:hover{
+    background:#111;
+    color:white;
+    transform:translateY(-3px);
+}
+
+.btn:active{
+    transform:scale(.92);
+}
+
+/* SECTION */
+section{
+    padding:80px 20px;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    font-size:35px;
+    margin-bottom:45px;
+}
+
+/* SERVICES */
+.services{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border:1px solid #ddd;
+    border-radius:18px;
+    transition:.25s;
+}
+
+.card:hover{
+    transform:translateY(-7px);
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.card .icon{
+    font-size:35px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    margin-bottom:12px;
+}
+
+.card p{
+    color:#666;
+    line-height:1.6;
+}
+
+/* ABOUT */
+.about{
+    background:white;
+}
+
+.about-box{
+    max-width:750px;
+    margin:auto;
+    text-align:center;
+}
+
+.about-box p{
+    color:#666;
+    line-height:1.8;
+    font-size:17px;
+}
+
+/* CONTACT */
+.contact-box{
+    text-align:center;
+    background:white;
+    border:1px solid #ddd;
+    border-radius:22px;
+    padding:45px 20px;
+}
+
+.contact-box p{
+    color:#666;
+    margin:10px 0 25px;
+}
+
+/* FOOTER */
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+}
+
+/* MOBILE */
+@media(max-width:700px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero{
+        min-height:80vh;
+    }
+
+    .hero h1{
+        font-size:43px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .services{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:60px 15px;
+    }
+
+  .business-img{
+    width:100%;
+    max-width:700px;
+    height:280px;
+    object-fit:cover;
+    border-radius:20px;
+    margin-bottom:25px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+<nav class="navbar">
+
+    <div class="logo">
+        Jagdish Business
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+</nav>
+</header>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+    <span class="badge">
+        Welcome to our business
+    </span>
+
+    <h1>
+        Quality Service.<br>
+        Trusted Business.
+    </h1>
+
+    <p>
+        We provide reliable products and professional
+        services for our customers.
+    </p>
+
+    <a href="#contact" class="btn">
+        Contact Now
+    </a>
+
+    <a href="#services" class="btn">
+        Our Services
+    </a>
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+<section id="services">
+
+<div class="container">
+
+    <h2 class="section-title">
+        Our Services
+    </h2>
+
+    <div class="services">
+
+        <div class="card">
+
+            <div class="icon">🛠️</div>
+
+            <h3>
+                Professional Service
+            </h3>
+
+            <p>
+                High-quality and reliable service
+                according to customer requirements.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">📦</div>
+
+            <h3>
+                Quality Products
+            </h3>
+
+            <p>
+                We provide useful and quality
+                products at reasonable prices.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🤝</div>
+
+            <h3>
+                Customer Support
+            </h3>
+
+            <p>
+                Friendly support and assistance
+                whenever our customers need us.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section class="about" id="about">
+
+<div class="container">
+
+    <h2 class="section-title">
+        About Us
+    </h2>
+  <img 
+    src="business.jpg"
+    alt="Business Photo"
+    class="business-img">
+
+    <div class="about-box">
+
+        <p>
+            We are a customer-focused business dedicated
+            to providing quality products and dependable
+            services. Our goal is to build long-term trust
+            with every customer.
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+
+<div class="container">
+
+    <div class="contact-box">
+
+        <h2>
+            Let's Work Together
+        </h2>
+
+        <p>
+            Contact us today for more information.
+        </p>
+
+      <a
+    href="https://www.google.com/maps"
+    class="btn"
+    target="_blank">
+    📍 Find Us
+      </a>
+
+        <!-- CHANGE THIS NUMBER -->
+        <a
+          href="https://wa.me/919999999999"
+          class="btn"
+          target="_blank">
+          WhatsApp Us
+        </a>
+
+        <!-- CHANGE THIS NUMBER -->
+        <a
+          href="tel:+919999999999"
+          class="btn">
+          Call Now
+        </a>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    © 2026 Jagdish Business. All Rights Reserved.
+
+</footer>
+
+
+<script>
+
+console.log("Website loaded successfully!");
+
+</script>
+
+</body>
+</html>
